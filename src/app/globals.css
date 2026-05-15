@@ -1,0 +1,41 @@
+@import "tailwindcss/index.css";
+@plugin "@tailwindcss/typography";
+
+@theme {
+    --color-creme: #F5F0E8;
+    --color-terracotta: #C9886A;
+    --color-charbon: #1C1917;
+
+    --font-serif: --font-dm-serif;
+    --font-sans: --font-dm-sans;
+}
+
+body {
+    background-color: var(--color-creme);
+    color: var(--color-charbon);
+}
+
+@layer base {
+    h1, h2, h3, h4, h5, h6 {
+        font-family: var(--font-serif), serif;
+        @apply text-charbon;
+    }
+    h1 {
+        @apply text-6xl font-semibold tracking-tighter;
+    }
+    h2 {
+        @apply text-5xl font-semibold tracking-tight;
+    }
+    h3 {
+        @apply text-4xl font-semibold;
+    }
+    h4 {
+        @apply text-3xl tracking-tight;
+    }
+    h5 {
+        @apply text-xl text-charbon/70;
+    }
+    h6 {
+        @apply text-lg text-charbon/70;
+    }
+}
